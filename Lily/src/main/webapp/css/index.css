@@ -1,0 +1,422 @@
+@charset "UTF-8";
+
+/* 모바일용 CSS */
+@media all and (min-width:320px) {
+    /* main title */
+    .main_title {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .main_title .f_title{
+        letter-spacing: 1;
+    }
+    .main_title span {
+        display:block;
+    }
+    .main_title span:first-child {
+        font-size:20px; 
+        line-height:1; 
+        color:#000; 
+        font-family: 'S-CoreDream-5Medium';
+        text-align: center;
+    }
+    .main_title span {
+        font-size: 12px;
+        line-height: 1;
+        color: #888;
+        padding-top: 6px;
+        text-align: center;
+    }
+    .main_title a {
+        position: absolute;
+        right: 0px;
+        bottom: 50px; /* 원래 0인데 왜 이렇게 해야지 되는거징..? */
+        font-size: 12px;
+        line-height: 1;
+        color: #888;
+        letter-spacing: -0.025em;
+        padding-right: 13px;
+        background: url(index.css) no-repeat;
+        background-position: 99% 3px;
+    }
+    .main_title a:hover {
+        color:#111;
+    }
+    
+    
+    /* img hover*/
+    #C_Wrap .main_img .ban_thumb{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background: #fff;
+		overflow: hidden;
+		position: relative;
+    }
+    #C_Wrap .main_img .ban_thumb::before {
+		position: absolute;
+		top: 0;
+		left: -75%;
+		z-index: 2;
+		display: block;
+		content: '';
+		width: 50%;
+		height: 100%;
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+		-webkit-transform: skewX(-25deg);
+		transform: skewX(-25deg);
+    }
+    #C_Wrap .main_img .ban_thumb:hover::before {
+		-webkit-animation: shine .75s;
+		animation: shine .75s;
+    }
+    
+	@-webkit-keyframes shine {
+		100% {
+			left: 125%;
+		}
+	}
+	@keyframes shine {
+		100% {
+			left: 125%;
+		}
+	}
+
+    /*swiper*/
+    .container {
+        position: relative;
+        width: 100%;	
+        overflow: hidden;
+    }
+
+    .container .slider-container {
+        position: absolute;
+        width:100%;
+        left:0;
+    }
+
+    .container .slider-container .main_slide {
+        position: absolute;
+        width: 100%;
+        box-sizing:border-box;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .slider-container.animated {
+        -webkit-transition: left .3s ease-in;
+        transition: left .3s ease-in;
+    }
+    .simple-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* main slide img */
+    .main_slide_inner01 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/M01.png');
+    }
+    .main_slide_inner02 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/M02.png');
+    }
+    .main_slide_inner03 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/M03.png');
+    }
+
+    /* 메인 하단 버튼 */
+    .pager {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        text-align: center;
+        margin:0;
+        padding-bottom: 30px;
+    }
+    .pager span{
+        width: 7px;
+        height: 7px;
+        background:#000; opacity: 0.2;
+        border-radius:50%; 
+        display: inline-block; 
+        text-indent: -9999em;
+        margin:0 5px;
+    }
+    .pager span.active{
+        background: #222;
+        opacity: 0.5;
+    }
+    /* 메인 좌우 버튼 */
+    #M-ban-prev, #M-ban-next {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        /* transform: translateY(0%); */
+        z-index: 9;
+        display: inline-block;
+        height: 5em;
+        width: 5em;
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+    }
+    #M-ban-prev.disabled, #M-ban-next.disabled {
+        display:none;
+    }
+    #M-ban-prev {
+        margin-left: -45%;
+        background-image: url('../img/svg/arrow-left-out.svg'); 
+    }
+    #M-ban-next {
+        margin-left: 35%;
+        background-image: url(../img/svg/arrow-right-out.svg);
+    }
+    
+    #M-ban-prev:hover { 
+        background-image: url('../img/svg/arrow-left-over.svg');
+    }
+    #M-ban-next:hover { 
+        background-image: url('../img/svg/arrow-right-over.svg'); 
+    }
+
+    /* 공식몰만의 혜택 */
+    .main_img {
+        max-width:1200px; 
+        margin:0 auto;
+    }
+    .main_img .ban_thumb {
+        position: relative;
+    }
+    .main_img .ban_thumb img {
+        width: 100%;
+    }
+    .main_img ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_img ul li {
+        float:left;
+        padding-top: 20px;
+    }
+    .main_img ul li:first-child{
+        padding-top: 0px;
+    }
+    .main_img .ban_thumb {
+        position:relative;
+    }
+    .main_img .ban_ico {
+        position:absolute; 
+        left:0px; 
+        top:0px;
+    }
+    .main_img .ban_txt span:first-child {
+        color: #888;
+        font-size: 12px;
+        /* font-weight: 700; */
+        letter-spacing: -0.025em;
+        padding-top: 22px;
+    }
+    .main_img .ban_txt span {
+        display: block;
+        text-align: left;
+        letter-spacing: -0.05em;
+        font-size: 16px;
+        line-height: 1.5;
+        /* padding-top: 5px; */
+        padding-left: 10px;
+        color: #222;
+    }
+    .main_img .ban_txt .evnet_title{
+        font-size:16px;
+    }
+    .main_img .ev_ar {
+        padding-top:22px; 
+        padding-right:10px;
+    }
+    .swiper-button-prev{
+        padding-left: 10px;
+    }
+    .swiper-button-next{
+        padding-right: 10px;
+    }
+
+    /* ban_event, long_ban_area 가리기 */
+    .ban_event{
+        display: none;
+    }
+    .long_ban_area{
+        display: none;
+    }
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width:768px) {
+    /* 메인 배너 슬라이드 */
+
+    /* main slide img */
+    .main_slide_inner01 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/TB01.png');
+    }
+    .main_slide_inner02 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/TB02.png');
+    }
+    .main_slide_inner03 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/TB03.png');
+    }
+
+    /* 메인 하단 버튼 */
+    .pager span{
+        width: 10px;
+        height: 10px;
+        background:#00000052;
+        border-radius:50%; 
+        display: inline-block; 
+        text-indent: -9999em;
+        margin:0 5px;
+    }
+    /* 메인 좌우 버튼 */
+    #M-ban-prev {
+        margin-left: -45%;
+        background-image: url('../img/svg/arrow-left-out.svg'); 
+    }
+    #M-ban-next {
+        margin-left: 40%;
+        background-image: url('../img/svg/arrow-right-out.svg');
+        
+    }
+    /* event banner */
+    .ban_event {
+        display: block;
+        max-width:1200px; margin:20px auto; 
+    }
+    .ban_event_inner {
+        height:170px;
+        background-position:top center;
+        background-image:url('../img/banner/sub-banner.png');
+    }
+    .long_ban_area {
+        display: block;
+        width:100%;
+        margin:20px 0px;
+    }
+    .logn_ban_inner {
+        height:450px;
+        background-position:top center;
+        background-image:url('../img/banner/long-banner02.png');
+    }
+
+    /* main_img */
+    .main_img ul {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .main_img ul li {
+        display: flex;
+        padding-top: 0px;
+        justify-content: space-evenly;
+    }
+    .main_img ul li a {
+        width: 90%;
+    }
+
+    /* new menu */
+    .swiper {
+        position: relative;
+        max-width: 1200px; width: 100%;
+        margin: auto;
+    }
+    .best .bx_group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .new_menu .thumb img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* PC용 CSS */
+@media all and (min-width:960px) { /* 960px or 1024px */
+
+    /* main slide img */
+    .main_slide_inner01 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/PC01.png');
+    }
+    .main_slide_inner02 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/PC02.png');
+    }
+    .main_slide_inner03 {
+        height:700px;
+        background-position:top center;
+        background-image:url('../img/banner/PC03.png');
+    }
+
+
+    /* main title */
+    .main_title {
+        padding-top: 100px;
+    }
+    /* main_img */
+    .main_img ul li {
+        display: block;
+    }
+    .swiper-button-prev{
+        padding-left: 0px;
+    }
+    .swiper-button-next{
+        padding-right: 0px;
+    }
+
+
+    /* event banner */
+    .ban_event {
+        display: block;
+        max-width:1200px; margin:20px auto; 
+    }
+    .ban_event_inner {
+        height:170px;
+        background-position:top center;
+        background-image:url('../img/banner/sub-banner.png');
+    }
+    .long_ban_area {
+        display: block;
+        width:100%;
+        margin:20px 0px;
+    }
+    .logn_ban_inner {
+        height:450px;
+        background-position:top center;
+        background-image:url('../img/banner/long-banner.png');
+    }
+    .footer_sec02 .footer_inner .ft_sec02_menu .pdx{
+        padding-left: 0px;
+    }
+}

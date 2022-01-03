@@ -1,0 +1,272 @@
+/* 모바일용 CSS */
+@media all and (min-width:320px) {
+	
+	/* select 메뉴 */
+	.big_tab{
+		display: none;
+	}
+	.sm_select {
+		display: block;
+		padding: 5px;
+		margin: 5px;
+		border: 1px solid #ccc;
+	}
+	.sm_select select {
+		width: 100%;
+		height: 40px;
+		color: #344022;
+		font-size: 15px;
+		font-weight: 550;
+		letter-spacing: 0.05em;
+		text-align: center;
+		border-radius: 0px;
+		background: url(../img/svg/caret-down.svg) no-repeat 99% 50%;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.sm_select select::-ms-expand {
+		display: none;
+	}
+	.sm_select > select > option{
+		color:#a5a5a5;
+	}
+
+	/* 컨텐츠 레이아웃 */
+	.best, .bx_group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		height: 100%;
+	}
+
+	/* 컨텐츠 수정 */
+	.b_m, .new_menu {
+		width: 40%;
+		margin-right: 0px;
+	}
+	.b_m .info, .new_menu .info {
+		margin-left: 15px;
+	}
+	.b_m .thumb, .new_menu .thumb { 
+		width: 100%;
+		height: auto;
+		font-size: 0;
+		border: 1px solid #ddd;
+		padding: 0;
+		line-height: 0;
+		position: relative;
+	}
+	/* 이미지 */
+	.b_m .thumb,
+	.new_menu .thumb{
+		overflow: hidden;
+	}
+	.b_m .thumb a img,
+	.new_menu .thumb a img {
+		width:100%;
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-ms-transform:scale(1); 
+		-o-transform:scale(1);  
+		transform:scale(1);
+		-webkit-transition:.3s;
+		-moz-transition:.3s;
+		-ms-transition:.3s;
+		-o-transition:.3s;
+		transition:.3s;
+	}
+	.b_m .thumb a:hover img,
+	.new_menu .thumb a:hover img {
+		-webkit-transform:scale(1.1);
+		-moz-transform:scale(1.1);
+		-ms-transform:scale(1.1);   
+		-o-transform:scale(1.1);
+		transform:scale(1.1);
+	}
+	
+	.b_m .dsc, .new_menu .dsc { 
+		margin-top: 10px;
+		font-weight: 400;
+		font-size: 10px;
+		color: #151515;
+	}
+	.b_m .subname, .new_menu .subname { 
+		margin-top:8px; 
+		font-weight: 400;
+		font-size:12px;
+		color:#999;
+		line-height:17px;
+	}
+	.b_m .brand, .new_menu .brand { 
+		margin-top:8px; 
+		font-weight: 400;
+		font-size:12px;
+		color:#999;
+		line-height:17px;
+	}
+	.b_m .price, .new_menu .price{
+		margin-top: 5px;
+		font-weight: 700;
+		color: #222;
+		font-size: 15px;
+		letter-spacing: -0.035em;
+	}
+	.b_m .price span, .new_menu .price span{
+		font-size:10px;
+	}
+	.b_m .icon, .new_menu .icon{
+		margin-top:10px;
+	}
+	.b_m .icon img, .new_menu .icon img{
+		padding-right:3px;
+	}
+	.b_m .nopadding td, .new_menu .nopadding td{
+		padding:0;
+	}
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width:768px) {
+	.big_tab ul{
+		overflow: hidden;
+		width: 100%;
+	}
+	.big_tab ul li{
+		width: 25%;
+		box-sizing: border-box;
+		float: left;
+		list-style-type: none;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+		line-height: 45px;
+		cursor: pointer;
+	}
+	.big_tab ul li a{
+		color: #a5a5a5;
+		font-size: 14px;
+	}
+	.big_tab ul li a:hover{
+		color: #344022;
+		font-weight: 600;
+	}
+	.big_tab ul li.activeClass{
+		border-bottom: 1px solid #344022;
+	}
+	.big_tab ul li.activeClass > a{
+		color: #344022;
+		font-family: 'S-CoreDream-5Medium';
+		font-size: 15px;
+	}
+	.sm_select {
+		display: none;
+	}
+	.big_tab{
+		display: block;
+		margin: 0 20px;
+	}
+	.best, .bx_group {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: nowrap;
+		padding: 20px;
+		padding-bottom: 0;
+	}
+	.bx_group {
+		padding: 30px;
+	}
+	.swiper-slide {
+		display: flex;
+		/* width: 262px; */
+		/* padding: 28px; */
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	.b_m {
+		width: 50%;
+	}
+	.b_m, .new_menu {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.b_m:last-child, .new_menu:last-child {
+		display: none;
+	}
+	.b_m .info {
+		width:100%;
+		padding: 5px 0 15px;
+		text-align:left;
+		display:inline-block;
+		position:relative;
+	}
+	.b_m .dsc, .new_menu .dsc { 
+		margin-top:20px;
+		font-weight:400;
+		font-size:14px;
+		color:#151515;
+	}
+	.b_m .subname, .new_menu .subname { 
+		margin-top:8px; 
+		font-weight: 400;
+		font-size:12px;
+		color:#999;
+		line-height:17px;
+	}
+	.b_m .price, .new_menu .price{
+		margin-top:5px;
+		font-family: 'S-CoreDream-4Regular';
+		color:#222;
+		font-size:20px;
+		letter-spacing: 0.5px;
+	}
+	.b_m .price span, .new_menu .price span{
+		font-size:12px;
+	}
+	.swiper-button-prev{
+		padding-left: 10px;
+	}
+	.swiper-button-next{
+		padding-right: 10px;
+	}
+}
+
+
+/* PC용 CSS */
+@media all and (min-width:960px) { /* 960px or 1024px */
+	.tabs {
+		margin: 0 auto;
+		height:485px;
+		max-width: 1200px;
+		overflow:hidden;
+	}
+	.big_tab{
+		display: block;
+		margin: 0;
+	}
+	.best, .bx_group {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: nowrap;
+		padding: 0;
+		padding-top: 30px
+	}
+	.b_m, .new_menu {
+		margin-right: 30px;
+		margin-left:0;
+	}
+	.b_m:last-child, .new_menu:last-child {
+		display: block;
+	}
+	.new_menu:first-child{
+		margin-left:30px;
+	}
+	.b_m:last-child{
+		margin-right:0px;
+	}
+	.swiper-button-prev{
+		padding-left: 0px;
+	}
+	.swiper-button-next{
+		padding-right: 0px;
+	}
+}

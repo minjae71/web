@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+*{ box-sizing: border-box; }
+#C_Wrap { margin-top: 120px; }
+
+#idMessage { color:red; }
+#pwdMessage { color:red; }
+#pwdCheckMessage { color:red; }
+#idMessage, #pwdMessage, #pwdCheckMessage {
+	position: relative;
+	bottom: 2px;
+	padding-left: 5px;
+}
+
+/* section */
+section{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .contentBx{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+}
+section .contentBx .formBx{
+	width: 50%;
+}
+
+/* sub header */
+section .contentBx .formBx h2{
+	color: #333;
+	text-align: center;
+	font-size: 1.5em;
+	font-size: 20px;
+	font-family: 'S-CoreDream-5Medium';
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+
+/* login field */
+section .contentBx .formBx .join_field{
+	height: 45px;
+}
+
+
+/* inputBx */
+	section .contentBx .formBx .inputBx{
+		display: flex;
+		margin-bottom: 20px;
+		flex-direction: column;
+	}
+	section .contentBx .formBx .inputBx:first-child,
+	section .contentBx .formBx .inputBx:nth-child(3),
+	section .contentBx .formBx .inputBx:nth-child(5){
+		margin-bottom: 5px;
+	}
+	section .contentBx .formBx .addBX{
+		margin-bottom: 10px;
+	}
+	section .contentBx .formBx .inputBx input{
+		/* width: 100%; */
+		height: 100%;
+		padding: 10px 10px;
+		outline: none;
+		font-weight: 400;
+		border: 1px solid #ddd;
+		font-size: 14px;
+		letter-spacing: 1px;
+		color: #646464;
+		background: transparent;
+		border-radius: 5px;
+	}
+	
+	/* 생일, 이메일, 휴대전화 */
+	section .contentBx .formBx .DPset{
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+	}
+	section .contentBx .formBx .DPset .unB{
+		font-size: 14px;
+		padding: 10px 5px;
+	}
+	section .contentBx .formBx .DPset .new-birth {
+		width: 100%;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		font-size: 14px;
+		padding: 10px 10px;
+	}
+	section .contentBx .formBx .DPset .ph2 {
+		width: 100%;
+		border: 1px solid #ddd;
+		font-size: 14px;
+		letter-spacing: 1px;
+		color: #646464;
+		background: transparent;
+		border-radius: 5px;
+	}
+	section .contentBx .formBx .DPset .unB{
+		font-size: 14px;
+		padding: 14px 5px;
+	}
+	section .contentBx .formBx .DPset .hg23,
+	section .contentBx .formBx .inputBx .arBX input,
+	section .contentBx .formBx .inputBx input{
+		height: 23px;
+	}
+	section .contentBx .formBx .DPset .ph1 {
+		width: 100%;
+		height: 45px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		font-size: 14px;
+		/*font-weight: bold;*/
+		padding: 10px 10px;
+	}
+	section .contentBx .formBx .DPset .ph2 {
+		width: 100%;
+		border: 1px solid #ddd;
+		font-size: 14px;
+		/*font-weight: bold;*/
+		letter-spacing: 1px;
+		color: #646464;
+		background: transparent;
+		border-radius: 5px;
+	}
+	/* 주소 */
+	section .contentBx .formBx .inputBx .arBX{
+		display: flex;
+	}
+
+/* button */
+section .contentBx .formBx .btnBX{
+	display: flex;
+	margin: 20px 0;
+	flex-direction: column;
+}
+section .contentBx .formBx .inputBx input[type="button"]{
+	height: 25px;
+	background: #9AB377;
+	color: #fff;
+	font-family: 'S-CoreDream-4Regular';
+	outline: none;
+	border: none;
+	font-weight: 500;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+section .contentBx .formBx .inputBx input[type="button"]:hover{
+	background: #708E48;
+}
+section .contentBx .formBx .inputBx input[type="reset"]{
+	height: 25px;
+	background: #ffffff;
+	color: #9ab377;
+	font-family: 'S-CoreDream-4Regular';
+	outline: none;
+	border: 1px solid #ddd;
+	font-weight: 500;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+section .contentBx .formBx .inputBx input[type="reset"]:hover{
+	background: #9ab377;
+	color: #ffffff;
+}
+
+/* 약관동의 폼 */
+section .contentBx .formBx .agreeform{
+	margin-left: 5px;
+}
+#chkwrap{
+	display: flex;
+	flex-direction: column;
+}
+#chkwrap .all-chk {
+	display: flex;
+	margin: 10px 0;
+	/* height: 43px; */
+	/* line-height: 45px; */
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+	align-items: center;
+}
+#chkwrap .cont ul{
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #646464;
+	margin-bottom: 10px;
+}
+#chkwrap .cont ul .agreeflex{
+	display: flex;
+	align-items: baseline;
+	height: 22px;
+}
+#chkwrap .cont ul li .popupBX {
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	line-height: 16px;
+	margin-left: 5px;
+	font-weight: normal;
+	font-size: 11px;
+	border: 1px solid #bdbec7;
+	background: #fafafa;
+	text-align: center;
+}
+#chkwrap .pbl10{
+	padding-left: 10px;
+}
+#chkwrap .cont .marketing{
+	margin-bottom: 10px;
+}
+#chkwrap .cont .marketing .mk-wrap div br{
+	display: none;
+}
+
+/* social */
+section .contentBx .formBx h3{
+	font-size: 15px;
+	color: #9AB377;
+	text-align: center;
+	margin: 80px 0 30px;
+	font-weight: 500;
+}
+section .contentBx .formBx .sci{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .contentBx .formBx .sci li{
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #BEC1BA;
+	border-radius: 50%;
+	margin: 0 20px;
+	cursor: pointer;
+}
+section .contentBx .formBx .sci .GG:hover{
+	background: #ea4335;
+}
+section .contentBx .formBx .sci .KT:hover{
+	background: #ffe812;
+}
+section .contentBx .formBx .sci .N:hover{
+	background: #2db400;
+}
+section .contentBx .formBx .sci li img{
+	width: 50px;
+	height: 50px;
+	transform: scale(0.5);
+	filter: invert(1);
+}
+
+/* 모바일 CSS */
+@media (max-width: 768px){
+	
+	/* section */
+	section .contentBx{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	
+	/* form */
+	section .contentBx .formBx{
+		width: 100%;
+		padding: 0 40px;
+		margin: 0 50px;
+	}
+
+	/* social */
+	section .contentBx .formBx h3 {
+		color: #9AB377;
+		text-align: center;
+		margin: 30px 0 10px;
+		font-weight: 500;
+	}
+	
+	/* 약관동의 폼 */
+	#chkwrap .cont .marketing .mk-wrap .mk-all{
+		margin-bottom: 10px;
+	}
+	#chkwrap .cont .marketing .mk-wrap div br{
+		display:block !important;
+	}
+}
+/* 태블릿용 CSS */
+@media (max-width:1194px) {
+	
+	/* section */
+	section .contentBx{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 75%;
+		height: 100%;
+		z-index: 1;
+	}
+	
+	/* social */
+	section .contentBx .formBx h3 {
+		color: #9AB377;
+		text-align: center;
+		margin: 30px 0 20px;
+		font-weight: 500;
+	}
+	
+	/* margin-top setting */
+	.mgt10{
+		margin-top: 10px;
+	}
+}
+

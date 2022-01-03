@@ -1,0 +1,700 @@
+@charset "UTF-8";
+
+/* 모바일용 CSS */
+@media all and (min-width:320px) {
+	
+	/* logo */
+	#MhdWrap .logo img {
+		margin: 15px 20px;
+		max-width: 100px;
+	}
+	
+	*, *::after, *::before {
+		box-sizing: border-box;
+	}
+	.nav-open main {
+		transform: scale(.8);
+	}
+
+	.nav-trigger {
+		position: absolute;
+		z-index: 11;
+		top: 20px;
+		right: 20px;
+		height: 25px;
+		width: 25px;
+		overflow: hidden;
+		color: transparent;
+		white-space: nowrap;
+		text-indent: 100%;
+	}
+
+	.nav-trigger span,
+	.nav-trigger span::before,
+	.nav-trigger span::after {
+		position: absolute;
+		height: 2px;
+		width: 25px;
+		background: #333;
+	}
+
+	.nav-trigger span {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: background .3s;
+	}
+
+	.nav-trigger span::before,
+	.nav-trigger span::after {
+		content: '';
+		top: 0;
+		left: 0;
+		transition: background .3s, transform .3s;
+	}
+
+	.nav-trigger span::before {
+		transform: translateY(-10px);
+	}
+
+	.nav-trigger span::after {
+		transform: translateY(10px);
+	}
+
+	.nav-trigger:hover span, 
+	.nav-trigger:hover span::before,
+	.nav-trigger:hover span::after {
+		background: #333;
+	}
+
+	.nav-open .nav-trigger span {
+		background: transparent;
+	}
+
+	.nav-open .nav-trigger span::before,
+	.nav-open .nav-trigger span::after {
+		background: #333;
+	}
+
+	.nav-open .nav-trigger span::before {
+		transform: rotate(-45deg);
+	}
+
+	.nav-open .nav-trigger span::after {
+		transform: rotate(45deg);
+	}
+
+	.overlay {
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #1C1D21;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .5s, visibility .5s;
+	}
+
+	.nav-open .overlay {
+		opacity: .6;
+		visibility: visible;
+	}
+
+	.nav-container {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 90%;
+		max-width: 460px;
+		padding: 8em 0;
+		background: white;
+		overflow: auto;
+		transform: translateZ(0);
+		transform: translateX(100%);
+		transition: transform .5s cubic-bezier(.07,.23,.34,1);
+	}
+
+	.nav-open .nav-container {
+		transform: translateX(0);
+	}
+
+	.nav-container h2 {
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #AAAAAA;
+		margin: 1.5em 0;
+	}
+
+	.nav {
+		padding: 0;
+	}
+	.nav ul{
+		padding-left: 10px;
+	}
+	.nav a {
+		display: block;
+		padding: .4em 0;
+		font-size: 15px;
+		font-weight: bold;
+		/* font-family: serif; */
+		text-decoration: none;
+		color: #2d2d2d;
+		transform: translateZ(0);
+	}
+	.nav-open .nav a {
+		animation: slide-in .4s .2s backwards;
+	}
+
+	/* info name */
+	.accordion-body__contents .header-login::before {
+		content: "LOGIN";
+	}
+	.accordion-body__contents .header-login:hover::before {
+		content:"로그인";letter-spacing: 1px;
+		color:#000;
+	}
+
+	.accordion-body__contents .header-logout::before {
+		content: "LOGOUT";
+	}
+	.accordion-body__contents .header-logout:hover::before {
+		content:"로그아웃";letter-spacing: 1px;
+	color:#000;
+	}
+
+	.accordion-body__contents .header-modify::before {
+		content: "MODIFY";
+	}
+	.accordion-body__contents .header-modify:hover::before {
+		content:"정보수정";letter-spacing: 1px;
+		color:#000;
+	}
+
+	.accordion-body__contents .header-cart::before {
+		content: "CART";
+	}
+	.accordion-body__contents .header-cart:hover::before {
+		content:"장바구니";letter-spacing: 1px;
+		color:#000;
+	}
+
+	.accordion-body__contents .header-order::before {
+		content: "ORDER";
+	}
+	.accordion-body__contents .header-order:hover::before {
+		content:"주문목록";letter-spacing: 1px;
+		color:#000;
+	}
+
+	.accordion-body__contents .header-mypage::before {
+		content: "MYPAGE";
+	}
+	.accordion-body__contents .header-mypage:hover::before {
+		content:"마이페이지";letter-spacing: 1px;
+		color:#000;
+	}
+
+	.accordion-body__contents .header-notice::before {
+		content: "NOTICE";
+	}
+	.accordion-body__contents .header-notice:hover::before {
+		content:"공지사항";letter-spacing: 1px;
+		color:#000;
+	}
+
+	.accordion-body__contents .header-qa::before {
+		content: "Q&A";
+	}
+	.accordion-body__contents .header-qa:hover::before {
+		content:"질의응답";letter-spacing: 1px;
+		color:#000;
+	}
+	.accordion-body__contents .header-mypage-admin::before {
+		content: "MYPAGE";
+	}
+	.accordion-body__contents .header-mypage-admin:hover::before {
+		content:"관리자페이지";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	h1{
+		margin: 30px auto 30px auto;
+		color: #09fbd2;
+		width:100%;
+		text-align: center;
+	}
+	
+	ul.menu{
+		padding: 0;
+		list-style: none;
+		width: 400px;
+		margin: 20px auto;
+		box-shadow: 0px 0px 25px #00000070;
+		clear: both;
+		display: table;
+		margin-bottom:100px;
+	}
+	ul.menu .list{
+		font-size: 14px;
+		border-bottom:1px solid #324252;
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		height: 50px;
+		vertical-align: sub;
+		background: #3e5165;
+		clear: both;
+	}
+	ul.menu .list:after{
+		content: "\f107";
+		position: absolute;
+		right: 17px;
+		top: 17px;
+		padding: 0px 5px;
+		color:#fff;
+	}
+	ul.menu .list:before{
+		content: '\f07b';
+		position: absolute;
+		left: 17px;
+		top: 17px;
+		padding: 0px 5px;
+		color:#fff;  
+	}
+	ul.menu .list:before > a{
+		text-decoration: none;
+		color: #fff;
+		padding: 17px 0px 17px 45px;
+		display: block;
+		height: 100%;
+		box-sizing: border-box;
+	}
+	ul.menu .list:before > a:hover{
+		background-color: #324252;
+		transition:  300ms all;
+		color: #09fbd2;
+	}
+	ul.menu .list .items{
+		height: 0px;
+		overflow: hidden;
+	}
+	ul.menu .list .items a{
+		padding:17px;
+	}
+	ul.menu .list .items a:hover{
+		background-color: #3f5d79;
+		color:#fff;
+		transition:  300ms all;
+	}
+	ul.menu .list .items a:last-child{
+		border-bottom:none;
+	}
+	
+	.active:after{
+		content: "\f106";
+		position: absolute;
+		right: 17px;
+		top: 17px;
+		padding: 0px 5px;
+		color:#fff;
+	}
+	.active:before{
+		content: '\f07c';
+		position: absolute;
+		left: 17px;
+		top: 17px;
+		padding: 0px 5px;
+		color:#fff;  
+	}
+	.active:before > .items{
+		display: block;
+		background: #23313f;
+		padding: 0px;
+		height: auto;
+		color:#fff;
+		transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+		transition: all 200ms;
+		clear: both;
+		float: left;
+		width: 100%;
+	}
+	.active:before > .items li{
+		padding:0px;
+		border-bottom:1px solid #324252;
+		list-style: none;
+	}
+	.active:before > .items li:last-child{
+		border-color:transparent;
+		padding-bottom: 0px;
+	}
+	.active > .items{
+		background-color: #2f4b67;
+	}
+	.active > .items > a{
+	color:#46efa4;
+	text-transform: uppercase;
+	font-weight: bold;
+	}
+	.list{
+		background: #697d92;
+		
+	}
+	.list > a{
+			padding: 17px 0px 17px 45px;
+	}
+	
+	/*  */
+	.accordion {
+		font-size: 1rem;
+		margin: 0 auto;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	
+	.accordion-header {
+		padding: 2.5em 2em;
+		background: white;
+		color: #333;
+		font-size: .75em;
+		letter-spacing: .1em;
+		transition: all .3s;
+	}
+	
+	.accordion__item {
+		border-bottom: 1px solid #f1f1f1;
+	}
+	
+	.accordion__item .accordion__item {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+	
+	.accordion-header:hover {
+		background: #f1f1f1;
+		position: relative;
+		z-index: 5;
+	}
+	
+	.accordion-body {
+		background: #fcfcfc;
+		color: #333;
+		display: none;
+	}
+	
+	.accordion-body__contents,
+	.accordion-body__contents a {
+		padding: 1.5em 1.5em;
+		font-size: .85em;
+		color: #333;
+	}
+	
+	/* 포인터 올리면 색상 변화 */
+	.accordion-body__contents:hover,
+	.accordion-body__contents:hover a {
+		background: #f1f1f1;
+		transition: all .3s;
+	}
+
+	.accordion__item.active:last-child .accordion-header {
+		border-radius: none;
+	}
+	
+	.accordion:first-child > .accordion__item > .accordion-header {
+		border-bottom: 1px solid transparent;
+	}
+	
+	.accordion__item > .accordion-header:after {
+		content: "\f3d0";
+		font-family: IonIcons;
+		font-size: 1.2em;
+		float: right;
+		position: relative;
+		top: -2px;
+		transition: .3s all;
+		transform: rotate(0deg);
+	}
+	
+	.accordion__item.active > .accordion-header:after {
+		transform: rotate(-180deg);
+	}
+	
+	.accordion__item.active .accordion-header {
+		background: #f1f1f1;
+	}
+	
+	.accordion__item .accordion__item .accordion-header,
+	.accordion__item .accordion__item .accordion-header a {
+		background: #f1f1f1;
+		color: #353535;
+	}
+
+	@media screen and (max-width: 1000px) {
+		.accordion {
+			width: 100%;
+		}
+	}
+	
+	#hdWrap {
+		display: none;
+	}
+	#MhdWrap {
+		display: block;
+		height: 70px;
+	}
+	
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width:768px) {
+	
+	#MhdWrap {
+		display: none;
+	}
+	#hdWrap {
+		display: block;
+	}
+	#header {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	/* header 영역 CSS */
+	.header_01 {
+		max-width: 1200px;
+		margin: 0 auto;
+		height: 15px;
+	}
+	.header_01 ul {
+		float: right;
+		padding: 16px 0px;
+	}
+	.header_01 ul li {
+		float: left;
+		font-size: 0px;
+		line-height: 1;
+	}
+	.header_01 ul li a {
+		font-size: 11px;
+		color: #707070;
+		background-position: left center;
+		padding: 0px 9px;
+		height: 20px;
+		line-height: 20px;
+		display: table;
+	}
+	
+	/* logo */
+	.header_02 {
+		margin: 0 auto;
+		position: relative;
+		padding-bottom: 28px;
+	}
+	.header_02 .logo {
+		text-align: center;
+	}
+	.header_02 .logo img {
+		max-width: 160px;
+	}
+
+	/* header 영역 CSS */
+	.header_01 {
+		max-width: 1200px;
+		margin: 0 auto;
+		height: 15px;
+	}
+	.header_01 ul {
+		float: right;
+		padding: 16px 0px;
+	}
+	.header_01 ul li {
+		float: left;
+		font-size: 0px;
+		line-height: 1;
+	}
+	.header_01 ul li a {
+		font-size: 11px;
+		color: #707070;
+		background-position: left center;
+		padding: 0px 9px;
+		height: 20px;
+		line-height: 20px;
+		display: table;
+		letter-spacing: 0.5px;
+	}
+	
+	.header_01 ul li .header-login::before {
+		content: "LOGIN";
+	}
+	.header_01 ul li .header-login:hover::before {
+		content:"로그인";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-logout::before {
+		content: "LOGOUT";
+	}
+	.header_01 ul li .header-logout:hover::before {
+		content:"로그아웃";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-modify::before {
+		content: "MODIFY";
+	}
+	.header_01 ul li .header-modify:hover::before {
+		content:"정보수정";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-cart::before {
+		content: "CART";
+	}
+	.header_01 ul li .header-cart:hover::before {
+		content:"장바구니";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-order::before {
+		content: "ORDER";
+	}
+	.header_01 ul li .header-order:hover::before {
+		content:"주문목록";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-mypage::before {
+		content: "MYPAGE";
+	}
+	.header_01 ul li .header-mypage:hover::before {
+		content:"마이페이지";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-notice::before {
+		content: "NOTICE";
+	}
+	.header_01 ul li .header-notice:hover::before {
+		content:"공지사항";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	.header_01 ul li .header-qa::before {
+		content: "Q&A";
+	}
+	.header_01 ul li .header-qa:hover::before {
+		content:"질의응답";letter-spacing: 1px;
+		color:#000;
+	}
+	.header_01 ul li .header-mypage-admin::before {
+		content: "MYPAGE";
+	}
+	.header_01 ul li .header-mypage-admin:hover::before {
+		content:"관리자페이지";letter-spacing: 1px;
+		color:#000;
+	}
+	
+	/* gnb*/
+	.gnb {
+		/* height: 55px; */
+		border-top: 1px solid #e8e8e8;
+		border-bottom: 1px solid #e8e8e8;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		position: relative;
+		z-index: 99;
+	}
+	.block {
+		padding: 0;
+	}
+	.add_menu {
+		list-style: none;
+		/* height: 55px; */
+		padding: 0;
+		margin: 0;
+	}
+	.add_menu li { /* 전체 메뉴의 리스트에 대한 스타일 */
+		float: left; /* 메뉴를 왼쪽부터 표시한다 */
+		position: relative;  /* 순서대로 표시한다 */
+		margin: 0;
+		padding: 0;
+	}
+	.add_menu li a {
+		display: block; /* 블록 레벨로 만듦 */
+		font-size: 16px; /* 글자 크기 */
+		font-family: 'Pretendard-Regular';
+		/* padding: 18px 25px; */
+		padding:0px 41.5px;
+		/*letter-spacing: 1px;*/
+		line-height:50px;
+		vertical-align:top;
+		margin: 0;
+		color: #333; /* 글자색 지정 */
+		margin: 0;
+		text-decoration: none; /* 글자의 밑줄 없애기 */
+		/*font-weight: 600;*/
+	}
+	
+	.submenu li a {
+		font-size: 12px; /* 글자 크기 */
+		padding: 0 20px;
+		z-index: 1;
+	}
+	
+	.cell:hover > a {
+		color: #a3a591;
+		transition-duration: 0.5s;
+	}
+	
+	.add_menu ul { /* 서브메뉴 스타일 */
+		list-style: none; /* 볼릿 없애기 */
+		margin: 0;
+		padding: 0;
+		position: absolute; /* 고정 위치 표시 */
+		left: 15px; /* 부모 요소와 왼쪽 좌표 값을 같게 한다. */
+		top: 41px; /* 부모 요소로부터 아래에 표시 */
+		width: 105px; /* 서브 메뉴의 너비 */
+		/* border: 1px solid #707070; */
+		background: #fff; /* 서브 메뉴의 배경색 */
+		opacity: 0;
+	}
+	
+	.add_menu ul li { /* 서브메뉴 리스트들의 스타일 */
+		float: none; /* (부모 요소의) 떠있는 속성을 해제하여 세로로 표시되도록 한다. */
+		margin: 0; 
+		padding: 0; 
+		font-size: 10px; /* 폰트 10px */
+	}
+	
+	.add_menu ul a { /* 서브메뉴 리스트의 링크 스타일*/
+		font-weight:normal; /* 굵기 보통으로 변경 */
+		/* color:black; */ /* 글자색 검정으로 변경 */
+	}
+	
+	.add_menu ul li:hover a { /* 마우스 포인터 올렸을 때 */
+		color: #fff;
+		font-weight: 600;
+		background: #a3a59180;
+		transition-duration: 1s;
+	}
+	
+	.add_menu li:hover ul {
+		opacity: 1;
+		transition-duration: 1s;
+	}
+	
+	.add_menu li:hover ul li {
+		overflow: visible; /* 영역 넘어가는 내용 있으면 표시 */
+		padding: 0;
+	}
+}
+
+
+/* PC용 CSS */
+@media all and (min-width:960px) { /* 960px or 1024px */
+}

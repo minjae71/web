@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.agrW{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 680px;
+    vertical-align: middle;
+}
+.agrW .contract-tbl tbody tr,
+.agrW .contract-tbl tbody tr th,
+.agrW .contract-tbl tbody tr th td,
+.agrW .contract-tbl tbody tr td div {
+    vertical-align: middle;
+}
+h4.tit {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.privercyCT textarea { 
+    width:97%; height:165px; 
+}
+.privercyCT textarea {
+    clear: both;
+    border: 1px solid #CCC;
+    background: #FFFFFF;
+    padding: 10px;
+    width: 660px;
+    resize: none;
+}
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+section .contract-tbl tbody th {
+    font-weight: normal;
+}
+section .contract-tbl th {
+    background: #fcfcfc;
+}
+
+section .contract-tbl th,
+section .contract-tbl td { 
+    border:1px solid #e0e0e0; 
+    text-align:center;
+}
+.contract-tbl .p10 {
+    padding: 10px;
+}
+.pd10{
+    padding: 10px;
+}
+section .contract-tbl th div {
+    height: 41px;
+    line-height: 43px;
+}
+.btm-msg {
+    padding-top:30px;
+    line-height:18px;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+.payagree textarea {
+	height: 500px;
+	resize: none;
+}

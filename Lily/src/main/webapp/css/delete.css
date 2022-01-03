@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+*{ box-sizing: border-box; }
+section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .contentBx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+section .contentBx .formBx{
+    width: 50%;
+}
+section .contentBx .formBx h2{
+    /*color: #9AB377;*/
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    /*border-bottom: 2px solid #9AB377;
+    display: inline-block;*/
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .join_field{
+    height: 45px;
+}
+section .contentBx .formBx .login_field span{
+    color: #252821;
+    width: 45px;
+    line-height: 45px;
+    padding-left: 15px;
+}
+section .contentBx .formBx .login_field span .show{
+    color: #252821;
+    width: 45px;
+    line-height: 45px;
+}
+section .contentBx .formBx .login_field input{
+    height: 100%;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #252821;
+    font-size: 16px;
+    
+    margin-bottom:10px;
+}
+section .contentBx .formBx .inputBx{
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+section .contentBx .formBx .btnBX{
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+}
+section .contentBx .formBx .radioDP{
+    display: flex;
+    flex-direction: row;
+}
+section .contentBx .formBx .radioDP label{
+    margin-right: 30px;
+    font-size: 14px;
+    /*font-weight: bold;*/
+}
+section .contentBx .formBx .betweenBx{
+    display: flex;
+    justify-content: space-between;
+}
+section .contentBx .formBx .betweenBx a{
+    color: #9AB377;
+}
+section .contentBx .formBx .betweenBx a:hover {
+    color: #708E48;
+}
+section .contentBx .formBx .inputBx .pass_show{
+    display: flex;
+}
+section .contentBx .formBx .inputBx input{
+    /* width: 100%; */
+    height: 100%;
+    padding: 10px 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #646464;
+    background: transparent;
+    border-radius: 5px;
+}/*
+section .contentBx .formBx .inputBx input[type="email"], 
+section .contentBx .formBx .inputBx a input[type="reset"]{
+    width: 100%;
+}*/
+section .contentBx .formBx .inputBx .input-radio{
+    width: 14px;
+    height: 14px;
+}
+section .contentBx .formBx .inputBx .arBX{
+    display: flex;
+}
+section .contentBx .formBx .inputBx .arBX .adnum{
+    width: 100%;
+}
+section .contentBx .formBx .DPset{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+section .contentBx .formBx .DPset .unB{
+    font-size: 14px;
+    padding: 10px 5px;
+}
+section .contentBx .formBx .DPset .new-birth {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+section .contentBx .formBx .DPset .ph2 {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #646464;
+    background: transparent;
+    border-radius: 5px;
+}
+section .contentBx .formBx .DPset .unB{
+    font-size: 14px;
+    padding: 14px 5px;
+}
+section .contentBx .formBx .DPset .hg23,
+section .contentBx .formBx .inputBx .arBX input,
+section .contentBx .formBx .inputBx input{
+    height: 23px;
+}
+section .contentBx .formBx .DPset .ph1 {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    padding: 10px 10px;
+}
+section .contentBx .formBx .DPset .ph2 {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    letter-spacing: 1px;
+    color: #646464;
+    background: transparent;
+    border-radius: 5px;
+}
+section .contentBx .formBx .agreeform{
+    margin-left: 5px;
+}
+
+/* delete-btn */
+section .contentBx .formBx .delete-btn {
+	display: flex;
+	flex-direction: column;
+}
+section .contentBx .formBx .inputBx2,
+section .contentBx .formBx .inputBx3{
+	width:100%;
+}
+section .contentBx .formBx .inputBx2 input[type="button"]{
+    height: 46px;
+    background: #9AB377;
+    color: #fff;
+	width:100%;
+    border: 0; 
+    border-radius: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+section .contentBx .formBx .inputBx2 input[type="button"]:hover{
+    background: #708E48;
+}
+section .contentBx .formBx .inputBx3 input[type="button"]{
+    height: 44px;
+    background: #fff;
+    /*border: 1px solid #9AB377;*/
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    vertical-align: middle;
+	width:99%;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+section .contentBx .formBx .inputBx3 input[type="button"]:hover{
+	color:#fff;
+    background: #9AB377;
+}
+
+/* button */
+/* 모바일 CSS */
+@media (max-width: 768px){
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contentBx .formBx{
+        width: 100%;
+        padding: 40px;
+        margin: 50px;
+    }
+}
+/* 태블릿용 CSS */
+@media (max-width:1194px) {
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contentBx .formBx h3 {
+        color: #9AB377;
+        text-align: center;
+        margin: 30px 0 20px;
+        font-weight: 500;
+    }
+    .mgt10{
+    	margin-top: 10px;
+    }
+}
+

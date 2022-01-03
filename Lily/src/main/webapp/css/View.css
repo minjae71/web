@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+/*모바일용 CSS*/
+@media all and (min-width:320px) {
+	
+	/* 기본 CSS */
+	#contentWrapper{
+		max-width:1200px;
+		margin: 0 auto;
+	}
+	
+	#content {
+		box-sizing: border-box;
+		margin-top: 120px;
+	}
+	#bbsData {
+		box-sizing: border-box;
+		margin: 0 10px;
+		margin-top: 120px;
+	}
+	
+	/* sub header */
+	#bbsData .page-body .bbs-tit h2 {
+		font-size: 1.313em;
+		font-size: 1.313rem;
+		color: #171717;
+	}
+	#bbsData .page-body .bbs-tit:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+	.tb-top, .tb-center {
+		text-align: center;
+	}
+	.tb-top{
+		color: #fff;
+	}
+	
+	/* table */
+	.bbs-table-view {
+		margin-top: 10px;
+	}
+	.bbs-table-view thead th {
+		color: #000;
+		font-size: 15px;
+		font-weight: normal;
+	}
+	/*  */
+	.board_table {
+		width: 100%;
+	}
+	.board_table caption {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	.board_table thead, .board_table tbody {
+		font-size: 0.813em;
+		font-size: 0.813rem;
+		text-align: center;
+		font-weight: bold;
+	}
+	.board_table thead tr th {
+		padding: 18px 0;
+		padding: 1.125rem 0;
+	}
+	.board_table tbody tr td {
+		padding: 22px 0;
+		padding: 1.375rem 0;
+	}
+	.board_table tbody, .board_table tbody a {
+		color: #333;
+	}
+	.board_table tbody tr{
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+	}
+	/* color */
+	.board_table thead {
+		color: #fff;
+		background: #9AB377;
+	}
+	.other1 thead {
+		color: #fff;
+		background: #5D732F;
+	}
+	.other2 thead {
+		color: #fff;
+		background: #3E5902;
+	}
+	/* 여백 없애기 */
+	.board_table tbody tr .umm{
+		padding: 0;
+		padding-top: 10px;
+	}
+	/* text */
+	.cont-sub-des {
+		position: relative;
+		text-align: right;
+	}
+	.cont-sub-des div {
+		padding-top: 5px;
+		font-size: 10px;
+	}
+	.cont-sub-des span {
+		margin-right: 15px;
+		color: #343434;
+	}
+	.cont-sub-des span em {
+		font-size: 12px;
+		color: #343434;
+		font-weight: bold;
+	}
+	/* 콘텐츠 */
+	.bbs-table-view .data-bd-cont {
+		padding: 20px 0 40px 0;
+		color: #8d8d8d;
+	}
+	.data-bd-cont .attach {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.data-bd-cont .attach .notice-img,
+	.data-bd-cont .attach .qna-img {
+		padding-bottom: 30px;
+	}
+	.data-bd-cont .attach .notice-img img,
+	.data-bd-cont .attach .qna-img img {
+		max-width: 100%;
+	}
+	
+	/* notice table setting */
+	.tableset thead tr th:first-child,
+	.tableset tbody tr td:first-child {
+		width: 10%;
+	}
+
+	.tableset thead tr th:nth-child(2) {
+		width: 20%;
+	}
+	
+	.tableset thead tr th:nth-child(3) {
+		width: 10%;
+	}
+	
+	.tableset thead tr th:nth-child(4),
+	.tableset tbody tr td:nth-child(4) {
+		display: none;
+	}
+	.tableset thead tr th:last-child,
+	.tableset tbody tr td:last-child {
+		display: none;
+	}
+	
+	/* 목록 */
+	.content_row_1 {
+		text-align: center;
+	}
+
+	.content_row_1 h3 {
+		margin: 26px 0 14px 0;
+		margin: 1.625rem 0 0.875rem 0;
+		font-size: 1.626em;
+		font-size: 1.626rem;
+		color: #333;
+	}
+
+	.content_row_1 p {
+		font-size: 0.938em;
+		font-size: 0.938rem;
+		line-height: 26px;
+		line-height: 1.625rem;
+		color: #444;
+	}
+	
+	/* btn */
+	.view-link {
+		padding: 20px 0 50px;
+		text-align: right;
+	}
+	.bbs-link {
+		font-size: 0;
+	}
+	.bbs-link a {
+		margin: 0 3px;
+	}
+	.view-link a {
+		width: 55px;
+		height: 30px;
+		font-size: 12px;
+		line-height: 30px;
+	}
+	.View_btn01 {
+		display: inline-block;
+		background: #fff;
+		color: #9ab377;
+		text-align: center;
+		border: 1px solid #9ab377;
+		border-radius: 5px;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.View_btn01:hover {
+		background: #9ab377;
+		color: #ffffff;
+	}
+	.View_btn02 {
+		display: inline-block;
+		color: #fff;
+		text-align: center;
+		border: 1px solid #9ab377;
+		border-radius: 5px;
+		background: #9AB377;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.View_btn02:hover {
+		background: #708E48;
+	}
+}
+
+/*태블릿용 CSS*/
+@media all and (min-width:768px) {
+	
+	/* 기본 CSS */
+	#contentWrapper{
+		max-width:1200px;
+		margin: 0 auto;
+	}
+	
+	#content {
+		box-sizing: border-box;
+		margin-top: 120px;
+	}
+	#bbsData {
+		box-sizing: border-box;
+		margin: 0;
+		margin-top: 120px;
+	}
+	.page-body {
+		padding: 40px;
+		padding: 2.500rem;
+	}
+	
+	/* table */
+	.bbs-table-view {
+		margin-top: 10px;
+	}
+	.bbs-table-view thead th {
+		color: #000;
+		font-size: 12px;
+		font-weight: normal;
+	}
+	/*  */
+	.board_table {
+		width: 100%;
+	}
+	.board_table caption {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	.board_table thead, .board_table tbody {
+		font-size: 0.813em;
+		font-size: 0.813rem;
+		text-align: center;
+		font-weight: bold;
+	}
+	.board_table thead tr th {
+		padding: 18px 0;
+		padding: 1.125rem 0;
+	}
+	.board_table tbody tr td {
+		padding: 22px 0;
+		padding: 1.375rem 0;
+	}
+	.board_table tbody, .board_table tbody a {
+		color: #333;
+	}
+	.board_table tbody tr{
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+	}
+	
+	/* table setting */
+	.board_table thead tr th:first-child, 
+	.board_table thead tr th:nth-child(3), 
+	.board_table thead tr th:nth-child(4),
+	.board_table tbody tr td:first-child, 
+	.board_table tbody tr td:nth-child(3), 
+	.board_table tbody tr td:nth-child(4),
+	.board_table thead tr th:last-child {
+		display: table-cell;
+	}
+
+	.board_table thead tr th:first-child {
+		width: 10%;
+	}
+
+	.board_table thead tr th:nth-child(2) {
+		width: 50%;
+	}
+	
+	.board_table thead tr th:nth-child(3) {
+		width: 10%;
+	}
+	
+	.board_table thead tr th:nth-child(4) {
+		width: 20%;
+	}
+	.board_table thead tr th:last-child {
+		width: 10%;
+	}
+	
+	/* 콘텐츠 */
+	.data-bd-cont .attach .notice-img img,
+	.data-bd-cont .attach .qna-img img {
+		max-width: 50%;
+	}
+	
+	/* text left */
+	.tb-left{
+		text-align: left;
+	}
+	
+	/* btn */
+	.view-link {
+		padding: 20px 0 50px;
+		text-align: right;
+	}
+	.bbs-link {
+		font-size: 0;
+	}
+	.bbs-link a {
+		margin: 0 3px;
+	}
+	.view-link a {
+		width: 81px;
+		height: 34px;
+		font-size: 12px;
+		line-height: 34px;
+	}
+	.View_btn01 {
+		display: inline-block;
+		background: #fff;
+		color: #9ab377;
+		text-align: center;
+		border: 1px solid #9ab377;
+		border-radius: 5px;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.View_btn01:hover {
+		background: #9ab377;
+		color: #ffffff;
+	}
+	.View_btn02 {
+		display: inline-block;
+		color: #fff;
+		text-align: center;
+		border: 1px solid #9ab377;
+		border-radius: 5px;
+		background: #9AB377;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.View_btn02:hover {
+		background: #708E48;
+	}
+}
+
+
+/*PC용 CSS*/
+@media all and (min-width:960px) { /*960px or 1024px*/
+
+}

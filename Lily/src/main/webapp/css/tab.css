@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.tabs {
+    margin: 0 auto;
+    width:1194px;
+    height:485px;
+    overflow:hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+.tabs .tab-header {
+    height:60px;
+    display:flex;
+    align-items:center;
+}
+.tabs .tab-header > div {
+    width:calc(100% / 4);
+    text-align:center;
+    color:#a5a5a5;
+    cursor:pointer;
+    font-size:16px;
+    outline:none;
+}
+.tabs .tab-header > div.active {
+    color:#a3a591;
+    font-weight:600;
+}
+/*.tabs .tab-indicator {
+    position:relative;
+    background:#a3a591;
+}*/
+.tabs .tab-body {
+    position:relative;
+    height:calc(100% - 60px);
+}
+.tabs .tab-body > div {
+    position: absolute;
+    top:-200%;
+    opacity:0;
+    transform:scale(0.9);
+    transition:opacity 500ms ease-in-out 0ms, 
+    transform 500ms ease-in-out 0ms;
+}
+.tabs .tab-body > div.active {
+    top:0px;
+    opacity:1;
+    transform:scale(1);
+}
+.best {
+    display: flex;
+    /* width: 262px; */
+    padding:28px;
+    justify-content: space-between;
+}
+.b_m {
+    padding-right: 30px;
+}
+.b_m:last-child {
+    padding-right:0px;
+}
+.b_m .info { 
+    width:100%;
+    padding:5px 0 15px 0;
+    text-align:left;
+    display:inline-block;
+    position:relative;
+}
+.b_m .thumb { 
+    width:100%;
+    height:auto;
+    font-size:0;
+    padding:0;
+    line-height:0; 
+    border:0px solid #e9e9e9;
+    position:relative;
+}
+.b_m .thumb:hover {
+    border:0px solid #999;
+}
+.b_m .thumb a, .b_m .thumb img { 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.b_m .thumb img {
+    border:0;
+}
+.b_m .dsc { 
+    margin-top:20px;
+    font-weight:400;
+    font-size:14px;
+    color:#151515;
+}
+.b_m .subname { 
+    margin-top:8px; 
+    font-weight: 400;
+    font-size:12px;
+    color:#999;
+    line-height:17px;
+}
+.b_m .brand { 
+    margin-top:8px; 
+    font-weight: 400;
+    font-size:12px;
+    color:#999;
+    line-height:17px;
+}
+.b_m .price {
+    margin-top:5px;
+    font-weight:700;
+    color:#222;
+    font-size:20px;
+    font-family:'Roboto','Nanum Gothic',sans-serif;
+    letter-spacing:-0.035em;
+}
+.b_m .price span {
+    font-size:12px;
+}
+.b_m .icon {
+    margin-top:10px;
+}
+.b_m .icon img {
+    padding-right:3px;
+}
+.b_m .nopadding td {
+    padding:0;
+}

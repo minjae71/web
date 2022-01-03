@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+/* 모바일용 CSS */
+@media all and (min-width:320px) {
+    section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }/*
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }*/
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        font-size: 14px;
+        z-index: 1;
+    }
+    section .contentBx .formBx{
+        margin: 50px;
+    }
+    section .contentBx .formBx .inputBx {
+        position: relative;
+        display: flex;
+        /* margin-bottom: 20px; */
+        flex-direction: column;
+        height: 45px;
+        width: 200px;
+    }section .contentBx .formBx .btnBX {
+        display: flex;
+        margin: 20px 0;
+        flex-direction: column;
+    }
+    section .contentBx .formBx .inputBx input{
+        /* width: 100%; */
+        /* height: 100%; */
+        padding: 10px 20px;
+        outline: none;
+        font-weight: 400;
+        border: 1px solid #ddd;
+        font-size: 10px;
+        /* letter-spacing: 1px; */
+        color: #252821;
+        background: transparent;
+        border-radius: 5px;
+    }
+    
+    section .contentBx .formBx .inputBx p{
+        color: #9AB377;
+    }
+    section .contentBx .formBx .inputBx p a {
+        color: #2d2d2d;
+    }
+    section .contentBx .formBx h3{
+        font-size: 15px;
+        color: #9AB377;
+        text-align: center;
+        margin: 80px 0 30px;
+        font-weight: 500;
+    }
+
+    section .contentBx h2 {
+        /* color: #9AB377; */
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.5em;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .best, .bx_group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    /* tab meun */
+    .big_tab{
+        display: block;
+        margin: 0 20px;
+    }
+    .big_tab ul{
+        overflow: hidden;
+        width: 100%;
+    }
+    .big_tab ul li{
+        width: 50%;
+        box-sizing: border-box;
+        float: left;
+        list-style-type: none;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer;
+    }
+    .big_tab ul li a{
+        color: #a5a5a5;
+        font-size: 14px;
+    }
+    .big_tab ul li a:hover{
+        color: #344022;
+        font-weight: 600;
+    }
+    .big_tab ul li.activeClass{
+        border-bottom: 1px solid #344022;
+    }
+    .big_tab ul li.activeClass > a{
+        color: #344022;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    /* 컨텐츠 */
+	section .contentBx .formBx .inputBx input[type="button"]{
+	    height: 25px;
+	    background: #9AB377;
+	    color: #fff;
+	    outline: none;
+	    border: none;
+	    font-weight: 500;
+	    cursor: pointer;
+	    -webkit-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+	section .contentBx .formBx .inputBx input[type="button"]:hover{
+	    background: #708E48;
+	}
+	section .contentBx .formBx .inputBx input[type="reset"]{
+	    height: 25px;
+	    background: #ffffff;
+	    color: #9ab377;
+	    outline: none;
+	    border: 1px solid #9ab377;
+	    font-weight: 500;
+	    cursor: pointer;
+	    -webkit-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+	section .contentBx .formBx .inputBx input[type="reset"]:hover{
+	    background: #9ab377;
+	    color: #ffffff;
+	}
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width:768px) {
+    .best, .bx_group {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+    .bx_group {
+        padding: 20px;
+    }
+    .swiper-slide {
+        display: flex;
+        /* width: 262px; */
+        /* padding: 28px; */
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    /* 컨텐츠 */
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contentBx .formBx .inputBx {
+        position: relative;
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        height: 45px;
+        width: 300px;
+    }
+    section .contentBx .formBx .btnBX {
+        height: 100%;
+    }
+    section .contentBx .formBx .inputBx input {
+        /* width: 100%; */
+        height: 100%;
+        padding: 10px 20px;
+        outline: none;
+        font-weight: 400;
+        border: 1px solid #ddd;
+    	font-size: 13px;
+        letter-spacing: 1px;
+        color: #252821;
+        background: transparent;
+        border-radius: 5px;
+    }
+    .mgt10{
+        margin-top: 10px;
+    }
+}
+
+
+/* PC용 CSS */
+@media all and (min-width:960px) { /* 960px or 1024px */
+    .tabs {
+        margin: 0 auto;
+        height: 100%;
+        max-width: 1200px;
+        overflow: hidden;
+    }
+    .big_tab{
+        display: block;
+        margin: 0;
+    }
+}
